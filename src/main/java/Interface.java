@@ -5,13 +5,16 @@ public class Interface {
     Account account = new Account();
     CreateAccount newAccount = new CreateAccount();
     LogIn logIn = new LogIn();
-    AccountActions accountActions = new AccountActions();
+
 
 
 
 
     public void atmApp() {
         Integer choice;
+        String userID;
+        String password;
+        Integer accountChoice;
 
         do {
 
@@ -24,9 +27,9 @@ public class Interface {
 
             switch (choice) {
 
-
                 // LogIn Code
                 case 1:
+
                     break;
 
 

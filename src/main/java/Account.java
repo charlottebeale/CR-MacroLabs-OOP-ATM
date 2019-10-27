@@ -67,4 +67,42 @@ public class Account {
     public void withdrawInvest(Double withdraw) {
         this.investBalance -= withdraw;
     }
+
+    public void transfer(Integer account, Integer account2, Double money){
+        switch(account) {
+            case 1:
+                switch (account2) {
+                    case 1:
+                        this.checkingBalance -= money;
+                        this.savingBalance += money;
+                        break;
+                    case 2:
+                        this.checkingBalance -= money;
+                        this.investBalance += money;
+                        break;
+                }
+            case 2:
+                switch (account2) {
+                    case 1:
+                        this.savingBalance -= money;
+                        this.checkingBalance += money;
+                        break;
+                    case 2:
+                        this.savingBalance -= money;
+                        this.investBalance += money;
+                        break;
+                }
+            case 3:
+                switch (account2) {
+                    case 1:
+                        this.investBalance -= money;
+                        this.checkingBalance += money;
+                        break;
+                    case 2:
+                        this.investBalance -= money;
+                        this.savingBalance += money;
+                        break;
+                }
+        }
+    }
 }
