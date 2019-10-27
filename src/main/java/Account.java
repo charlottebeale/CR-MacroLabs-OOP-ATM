@@ -1,7 +1,6 @@
 public class Account {
 
-    private String firstName;
-    private String lastName;
+    String accoutHolder[][] = new String [5][4];
     private Double checkingBalance;
     private Double savingBalance;
     private Double investBalance;
@@ -9,14 +8,41 @@ public class Account {
 
     public Account(){
 
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.checkingBalance = 0.00;
-        this.savingBalance = 0.00;
-        this.investBalance = 0.00;
+        //Username and password of client that already exists
+        accoutHolder[0][0] = "JaneDoe";
+        accoutHolder[0][1] = "p123";
+
+        //Username and password of client that already exists
+        accoutHolder[1][0] = "JohnS";
+        accoutHolder[1][1] = "MK67";
+
     }
 
-    public void setFirstName() {
+   public Integer getUsername(String username){
+
+        for (int index = 0; index < 5; index ++){
+
+            if ( username.equals(accoutHolder[index][0])){
+                return 0;
+            }
+        }
+
+        return 1;
+    }
+
+    public Integer getPassword(String password){
+
+        for (int index = 0; index < 5; index ++){
+
+            if (password.equals(accoutHolder[index][1])){
+                return 0;
+            }
+        }
+
+        return 1;
+    }
+
+  /*  public void setFirstName() {
         this.firstName = firstName;
     }
 
@@ -66,5 +92,5 @@ public class Account {
 
     public void withdrawInvest(Double withdraw) {
         this.investBalance -= withdraw;
-    }
+    }*/
 }

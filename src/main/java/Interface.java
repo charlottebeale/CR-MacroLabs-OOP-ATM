@@ -1,13 +1,11 @@
-import sun.rmi.runtime.Log;
+
 
 public class Interface {
 
     Account account = new Account();
     CreateAccount newAccount = new CreateAccount();
-    LogIn logIn = new LogIn();
+    //LogIn logIn = new LogIn();
     AccountActions accountActions = new AccountActions();
-
-
 
 
     public void atmApp() {
